@@ -29,7 +29,7 @@ def build_parser():
                         help='Location of .srt file to be processed')
     parser.add_argument('--output-dir', type=str,
                         help='Directory for processed files to be saved to',
-                        default='.\\out\\')
+                        default='./out/')
     parser.add_argument('--audio-out-file-pattern', type=str,
                         help='A python-style f-string for saving audio files',
                         default='{}-audio.wav')

@@ -1,5 +1,5 @@
 # srt-parse
-Segments a .mp3 file into several smaller audio clips using an accompanying .srt closed captioning file.
+Segments an audio file into several smaller audio clips using an accompanying .srt closed captioning file.
 
 ### Usage
 
@@ -12,10 +12,10 @@ Segments a .mp3 file into several smaller audio clips using an accompanying .srt
                  [--in-encoding IN_ENCODING] [--out-encoding OUT_ENCODING]
                  audio_input srt_input
 
-    Segment .mp3 files according to a provided .srt closed caption file
+    Segment audio files according to a provided .srt closed caption file
 
     positional arguments:
-      audio_input           Location of .mp3 file to be processed
+      audio_input           Location of audio file to be processed
       srt_input             Location of .srt file to be processed
 
     optional arguments:
@@ -56,3 +56,19 @@ Will produce in the following files in the output directory (by default `.\out\`
     out.csv
     
 Each file is made per subtitle in the .srt file and out.csv groups each audio file to its transcript.
+
+## Notes
+
+YouTube Subtitles will have a duration that matches two lines of text.
+
+Ex.
+```
+1
+00:00:03,830 --> 00:00:12,910 // this duration spans both written lines below
+I'll say to you it's a hot wonderful night
+
+3
+00:00:10,840 --> 00:00:14,889
+I want to thank the people who came up to me
+```
+
